@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>成竹グループ 採用ページ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  background: #faf8f5;
+  color: #1a1612;
+  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  max-width: 480px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.selector-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: #ffffffee;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  padding: 10px 16px;
+  border-bottom: 1px solid #e8e2da;
+}
+.selector-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 6px;
+}
+.selector-label { font-size: 9px; color: #a09080; letter-spacing: 0.1em; font-weight: 700; }
+.selector-close {
+  background: none; border: none; color: #a09080; font-size: 16px;
+  cursor: pointer; padding: 2px 6px;
+}
+.selector-buttons { display: flex; gap: 8px; }
+.selector-btn {
+  flex: 1; padding: 10px 14px; border-radius: 8px;
+  border: 1px solid #e0d8ce; background: #fff;
+  color: #8a7e72; font-size: 12px; font-weight: 700;
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+}
+.selector-btn.active {
+  background: #3a2e22; color: #f5ebe0; border-color: #3a2e22;
+}
+
+.hero {
+  position: relative;
+  padding: 56px 24px 44px;
+  background: linear-gradient(170deg, #f0e8dd 0%, #faf8f5 100%);
+  overflow: hidden;
+}
+.hero-accent {
+  position: absolute; top: -40px; right: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(199,130,60,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-accent2 {
+  position: absolute; bottom: -30px; left: -30px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(60,120,80,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.brand-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 14px;
+  background: #fff;
+  border: 1px solid #e0d8ce;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.brand-tag-icon { font-size: 14px; }
+.brand-tag-text {
+  font-size: 10px; color: #8a6e4e; font-weight: 700; letter-spacing: 0.08em;
+}
+.hero-title {
+  font-size: 28px; font-weight: 900; line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: #2a2018;
+}
+.hero-title .highlight {
+  background: linear-gradient(transparent 60%, #f0c87040 60%);
+  padding: 0 2px;
+}
+.hero-sub {
+  font-size: 14px; color: #7a6e62; line-height: 1.8;
+}
+
+.section { padding: 36px 24px; }
+.section-label {
+  font-size: 10px; color: #a09080; font-weight: 700;
+  letter-spacing: 0.12em; margin-bottom: 16px;
+}
+.section-label.accent { color: #b07830; }
+
+.curiosity-list { display: flex; flex-direction: column; gap: 10px; }
+.curiosity-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ebe5dc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.curiosity-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+  background: #f5efe8;
+}
+.curiosity-text-wrap { flex: 1; }
+.curiosity-title {
+  font-size: 13px; font-weight: 900; color: #2a2018;
+  margin-bottom: 3px;
+}
+.curiosity-desc {
+  font-size: 11px; color: #8a7e72; line-height: 1.6;
+}
+
+.hook-box {
+  margin-top: 24px; padding: 20px;
+  background: linear-gradient(135deg, #f5efe8, #faf8f5);
+  border: 1px solid #e0d8ce;
+  border-radius: 12px; text-align: center;
+}
+.hook-text {
+  font-size: 16px; font-weight: 900; color: #3a2e22; line-height: 1.7;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+.hook-sub {
+  font-size: 12px; color: #8a7e72; margin-top: 6px; line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e0d8ce, transparent);
+  margin: 0 24px;
+}
+
+.reasons-title {
+  font-size: 20px; font-weight: 900; margin-bottom: 20px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: #2a2018;
+}
+.reason-list { display: flex; flex-direction: column; gap: 14px; }
+.reason-card {
+  padding: 20px; background: #fff;
+  border-radius: 12px; border: 1px solid #ebe5dc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  position: relative; overflow: hidden;
+}
+.reason-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px;
+}
+.reason-card.accent-warm::before { background: #c0783a; }
+.reason-card.accent-green::before { background: #4a8a60; }
+.reason-card.accent-navy::before { background: #4a6080; }
+.reason-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.reason-num { font-size: 11px; font-weight: 900; opacity: 0.4; }
+.reason-num.warm { color: #c0783a; }
+.reason-num.green { color: #4a8a60; }
+.reason-num.navy { color: #4a6080; }
+.reason-title-text { font-size: 15px; font-weight: 900; color: #2a2018; }
+.reason-desc { font-size: 12px; color: #7a6e62; line-height: 1.7; }
+
+.numbers-box {
+  margin: 0 24px; padding: 24px 20px;
+  background: #fff;
+  border-radius: 12px; border: 1px solid #ebe5dc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.number-item { text-align: center; padding: 4px 0; }
+.number-value {
+  font-size: 34px; font-weight: 900; color: #c0783a;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+.number-unit { font-size: 12px; color: #c0783a; font-weight: 700; }
+.number-desc { font-size: 10px; color: #a09080; display: block; margin-top: 2px; }
+
+.voice-list { display: flex; flex-direction: column; gap: 12px; }
+.voice-card {
+  padding: 18px 20px; background: #fff;
+  border-radius: 12px; border: 1px solid #ebe5dc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.voice-text {
+  font-size: 13px; color: #3a2e22; line-height: 1.7;
+  margin-bottom: 8px;
+}
+.voice-role { font-size: 10px; color: #a09080; }
+
+.clinic-box {
+  margin: 0 24px; padding: 20px;
+  background: #fff; border-radius: 12px;
+  border: 1px solid #ebe5dc;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.clinic-name { font-size: 16px; font-weight: 900; color: #2a2018; margin-bottom: 4px; }
+.clinic-sub { font-size: 12px; color: #8a7e72; margin-bottom: 12px; }
+.clinic-row {
+  display: flex; justify-content: space-between;
+  font-size: 11px; padding: 7px 0;
+  border-bottom: 1px solid #f0ebe4;
+}
+.clinic-row:last-child { border-bottom: none; }
+.clinic-row-label { color: #3a2e22; font-weight: 700; }
+.clinic-row-addr { color: #a09080; }
+
+.cta-section { padding: 40px 24px 32px; }
+.cta-lead { text-align: center; margin-bottom: 20px; }
+.cta-lead p { font-size: 14px; color: #5a5048; line-height: 1.7; margin-bottom: 4px; }
+.cta-lead small { font-size: 11px; color: #a09080; }
+.cta-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 18px 24px;
+  background: linear-gradient(135deg, #06c755, #05a847);
+  color: #fff; font-size: 17px; font-weight: 900;
+  text-align: center; text-decoration: none;
+  border-radius: 14px; border: none; cursor: pointer;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 16px rgba(6, 199, 85, 0.3);
+  transition: all 0.2s; font-family: inherit;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(6, 199, 85, 0.4); }
+.cta-note { text-align: center; font-size: 10px; color: #b0a898; margin-top: 12px; }
+
+.footer {
+  padding: 20px 24px; border-top: 1px solid #ebe5dc;
+  text-align: center; font-size: 10px; color: #c0b8ae;
+}
+
+.fade-in { animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.target-content { display: none; }
+.target-content.active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- STAFF SELECTOR -->
+<div class="selector-bar" id="selectorBar">
+  <div class="selector-header">
+    <span class="selector-label">STAFF用：相手に合わせて選択 ↓</span>
+    <button class="selector-close" onclick="document.getElementById('selectorBar').style.display='none'">×</button>
+  </div>
+  <div class="selector-buttons">
+    <button class="selector-btn active" id="btnTransfer" onclick="switchTarget('transfer')">転職を考えている人</button>
+    <button class="selector-btn" id="btnComeback" onclick="switchTarget('comeback')">鍼灸から離れている人</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-accent"></div>
+  <div class="hero-accent2"></div>
+
+  <div class="brand-tag">
+    <span class="brand-tag-icon">🔥</span>
+    <span class="brand-tag-text">成竹グループ 採用</span>
+  </div>
+
+  <div class="target-content active" id="hero-transfer">
+    <h1 class="hero-title">鍼灸の結果が変わる<br><span class="highlight">「方程式」</span>が<br>成竹にはあります。</h1>
+    <p class="hero-sub">あなたの技術に、まだ伸びしろがあるとしたら？<br>その答え、見に来ませんか。</p>
+  </div>
+
+  <div class="target-content" id="hero-comeback">
+    <h1 class="hero-title">あなたが学校で学んだ鍼灸を<br><span class="highlight">"知っている"</span>から<br><span class="highlight">"使える"</span>へ<br>なりたくないですか？</h1>
+    <p class="hero-sub">ブランクは関係ない。<br>成竹の「方程式」があれば、もう一度始められる。</p>
+  </div>
+</div>
+
+<!-- CURIOSITY POINTS -->
+<div class="section">
+
+  <!-- 転職者向け -->
+  <div class="target-content active" id="points-transfer">
+    <div class="section-label accent">成竹の「方程式」って？</div>
+    <div class="curiosity-list">
+      <div class="curiosity-item">
+        <div class="curiosity-icon">🔥</div>
+        <div class="curiosity-text-wrap">
+          <div class="curiosity-title">高頻度×短時間のサブスク＋鍼灸保険で「効果を出す仕組み」がある</div>
+          <div class="curiosity-desc">1回の施術を長くするのではなく、短時間で頻度を上げる。サブスクと保険の組み合わせで患者の通院ハードルを下げ、結果につなげる設計。</div>
+        </div>
+      </div>
+      <div class="curiosity-item">
+        <div class="curiosity-icon">🗣️</div>
+        <div class="curiosity-text-wrap">
+          <div class="curiosity-title">ソーシャルスキルで「対面の影響力」を最大化する</div>
+          <div class="curiosity-desc">技術だけでは患者は変わらない。対面でのコミュニケーションを体系化し、患者の行動を変える「伝え方」を全スタッフが学べる環境。</div>
+        </div>
+      </div>
+      <div class="curiosity-item">
+        <div class="curiosity-icon">📐</div>
+        <div class="curiosity-text-wrap">
+          <div class="curiosity-title">「3類法」——古典に基づく成竹独自の診かた</div>
+          <div class="curiosity-desc">古典（先人たちの臨床データ）を元に、診かたを3つに絞って標準化。だから迷わない、ブレない、再現できる。</div>
+        </div>
+      </div>
+    </div>
+    <div class="hook-box">
+      <p class="hook-text">この3つが合わさったとき、<br>鍼灸の結果が変わる。<br>知りたくないですか？</p>
+      <p class="hook-sub">見学に来れば、すべて見せます。</p>
+    </div>
+  </div>
+
+  <!-- 復帰者向け -->
+  <div class="target-content" id="points-comeback">
+    <div class="section-label accent">成竹なら、"使える"に変われる理由</div>
+    <div class="curiosity-list">
+      <div class="curiosity-item">
+        <div class="curiosity-icon">🌱</div>
+        <div class="curiosity-text-wrap">
+          <div class="curiosity-title">ブランクがあっても大丈夫。「仕組み」で効果が出せる</div>
+          <div class="curiosity-desc">個人の腕だけに頼らない。サブスク×保険×高頻度通院の設計があるから、経験が浅くても結果を出せる環境がある。</div>
+        </div>
+      </div>
+      <div class="curiosity-item">
+        <div class="curiosity-icon">🤝</div>
+        <div class="curiosity-text-wrap">
+          <div class="curiosity-title">コミュニケーションも「型」がある。ゼロから学べる</div>
+          <div class="curiosity-desc">患者との話し方、伝え方に迷わない。ソーシャルスキルの体系があるから、人見知りでも対面の力を発揮できる。</div>
+        </div>
+      </div>
+      <div class="curiosity-item">
+        <div class="curiosity-icon">📐</div>
+        <div class="curiosity-text-wrap">
+          <div class="curiosity-title">「3類法」で迷わない。古典に基づく診かたが道しるべになる</div>
+          <div class="curiosity-desc">古典（先人たちの臨床データ）を元に、診かたを3つに絞って標準化。学校で学んだ知識と合わさると、施術の判断に自信が持てるようになる。</div>
+        </div>
+      </div>
+    </div>
+    <div class="hook-box">
+      <p class="hook-text">あなたの資格を<br>"使える"に変える環境、<br>見に来ませんか？</p>
+      <p class="hook-sub">まずは見学だけでもOKです。</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<!-- WHY SEICHIKU -->
+<div class="section">
+  <div class="section-label accent">WHY SEICHIKU?</div>
+  <h2 class="reasons-title">成竹が選ばれる3つの理由</h2>
+
+  <div class="reason-list">
+    <div class="reason-card accent-warm">
+      <div class="reason-header">
+        <span class="reason-num warm">01</span>
+        <span class="reason-title-text">お灸が「看板メニュー」の鍼灸整骨院</span>
+      </div>
+      <p class="reason-desc">東京でも珍しい、お灸を本気でやっている院。院内はモクモクと煙が立ち上る。他では学べないお灸の技術を、ここで極められる。</p>
+    </div>
+    <div class="reason-card accent-green">
+      <div class="reason-header">
+        <span class="reason-num green">02</span>
+        <span class="reason-title-text">AIフル活用。施術とコミュニケーション以外の業務ゼロへ</span>
+      </div>
+      <p class="reason-desc">事務作業・書類・管理業務にAIを導入し、スタッフの時間を施術と患者さまとのコミュニケーションに集中させる。「雑務に追われる」を終わりにする院。</p>
+    </div>
+    <div class="reason-card accent-navy">
+      <div class="reason-header">
+        <span class="reason-num navy">03</span>
+        <span class="reason-title-text">短時間正社員・フリーランス・業務委託もOK</span>
+      </div>
+      <p class="reason-desc">働き方改革を本気で進めている。フルタイムだけが選択肢じゃない。短時間正社員の枠組み、フリーランス、業務委託——あなたに合った働き方を一緒に設計できる。</p>
+    </div>
+  </div>
+</div>
+
+<!-- NUMBERS -->
+<div class="numbers-box">
+  <div class="section-label" style="text-align:center; margin-bottom:16px">NUMBERS</div>
+  <div class="numbers-grid">
+    <div class="number-item">
+      <span class="number-value">3</span><span class="number-unit">店舗</span>
+      <span class="number-desc">江東区で運営中</span>
+    </div>
+    <div class="number-item">
+      <span class="number-value">10</span><span class="number-unit">店舗</span>
+      <span class="number-desc">拡大目標</span>
+    </div>
+    <div class="number-item">
+      <span class="number-value">7</span><span class="number-unit">年</span>
+      <span class="number-desc">平均勤続年数</span>
+    </div>
+    <div class="number-item">
+      <span class="number-value">68</span><span class="number-unit">人</span>
+      <span class="number-desc">鍼灸保険の月間数</span>
+    </div>
+  </div>
+</div>
+
+<!-- STAFF VOICE -->
+<div class="section">
+  <div class="section-label">STAFF VOICE</div>
+  <div class="voice-list">
+    <div class="voice-card">
+      <p class="voice-text">「お灸をこんなに本格的にやっている院は他にない。毎日が勉強になる。」</p>
+      <span class="voice-role">— 鍼灸師 / 入社2年目</span>
+    </div>
+    <div class="voice-card">
+      <p class="voice-text">「鍼灸保険とサブスクの量を積むことで、オーダーメイドの患者さまの施術に活かされている。」</p>
+      <span class="voice-role">— 柔道整復師 / 入社3年目</span>
+    </div>
+  </div>
+</div>
+
+<!-- CLINIC INFO -->
+<div class="clinic-box">
+  <div class="section-label">CLINIC INFO</div>
+  <div class="clinic-name">成竹グループ（せいちくグループ）</div>
+  <div class="clinic-sub">鍼灸整骨院 ｜ 江東区</div>
+  <div class="clinic-row">
+    <span class="clinic-row-label">南砂院</span>
+    <span class="clinic-row-addr">江東区南砂</span>
+  </div>
+  <div class="clinic-row">
+    <span class="clinic-row-label">塩浜院</span>
+    <span class="clinic-row-addr">江東区塩浜</span>
+  </div>
+  <div class="clinic-row" style="border-bottom:none">
+    <span class="clinic-row-label">東砂院</span>
+    <span class="clinic-row-addr">江東区東砂</span>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-lead">
+    <p>「方程式」の中身、気になりませんか？</p>
+    <small>LINEで「見学希望」と送るだけでOKです</small>
+  </div>
+
+  <!-- ↓↓↓ LINE公式アカウントのURLに差し替えてください ↓↓↓ -->
+  <a href="https://lin.ee/9v0N0e7" class="cta-btn" target="_blank" rel="noopener noreferrer">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .349-.281.63-.63.63h-2.386c-.345 0-.627-.281-.627-.63V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.63-.631.63-.346 0-.626-.286-.626-.63V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.63-.631.63-.345 0-.627-.286-.627-.63V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.63H4.917c-.345 0-.63-.286-.63-.63V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .349-.281.63-.629.63M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+    </svg>
+    LINEで話を聞いてみる
+  </a>
+
+  <p class="cta-note">※ 強引な勧誘は一切しません。見学だけでもOKです。</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">© 成竹グループ（せいちくグループ）</div>
+
+<script>
+function switchTarget(target) {
+  document.getElementById('btnTransfer').classList.toggle('active', target === 'transfer');
+  document.getElementById('btnComeback').classList.toggle('active', target === 'comeback');
+  document.getElementById('hero-transfer').classList.toggle('active', target === 'transfer');
+  document.getElementById('hero-comeback').classList.toggle('active', target === 'comeback');
+  document.getElementById('points-transfer').classList.toggle('active', target === 'transfer');
+  document.getElementById('points-comeback').classList.toggle('active', target === 'comeback');
+  var el = document.getElementById('hero-' + target);
+  el.classList.remove('fade-in');
+  void el.offsetWidth;
+  el.classList.add('fade-in');
+}
+</script>
+
+</body>
+</html>
