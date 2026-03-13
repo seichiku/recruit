@@ -1,478 +1,458 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>成竹グループ 採用ページ</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  min-height: 100vh;
-  background: #faf8f5;
-  color: #1a1612;
-  font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
-  max-width: 480px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鍼灸師・柔道整復師 求人｜江東区でお灸を本格的に学ぶ｜成竹鍼灸整骨院グループ</title>
+  <meta name="description" content="江東区（南砂・塩浜・東砂）で鍼灸師・柔道整復師を募集中。東洋医学・お灸を本格的に使える職場。新卒・中途・ブランクありも歓迎。まずは見学だけでもOK。">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #faf8f5;
+      color: #1a1612;
+      font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+      max-width: 480px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
 
-.selector-bar {
-  position: sticky; top: 0; z-index: 100;
-  background: #ffffffee;
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  padding: 10px 16px;
-  border-bottom: 1px solid #e8e2da;
-}
-.selector-header {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 6px;
-}
-.selector-label { font-size: 9px; color: #a09080; letter-spacing: 0.1em; font-weight: 700; }
-.selector-close {
-  background: none; border: none; color: #a09080; font-size: 16px;
-  cursor: pointer; padding: 2px 6px;
-}
-.selector-buttons { display: flex; gap: 8px; }
-.selector-btn {
-  flex: 1; padding: 10px 14px; border-radius: 8px;
-  border: 1px solid #e0d8ce; background: #fff;
-  color: #8a7e72; font-size: 12px; font-weight: 700;
-  cursor: pointer; transition: all 0.2s; font-family: inherit;
-}
-.selector-btn.active {
-  background: #3a2e22; color: #f5ebe0; border-color: #3a2e22;
-}
+    /* ── SELECTOR BAR ── */
+    .selector-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: #ffffffee;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      padding: 10px 16px;
+      border-bottom: 1px solid #e8e2da;
+    }
+    .selector-label { font-size: 9px; color: #a09080; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 8px; }
+    .selector-buttons { display: flex; gap: 8px; }
+    .selector-btn {
+      flex: 1; padding: 10px 14px; border-radius: 8px;
+      border: 1px solid #e0d8ce; background: #fff;
+      color: #8a7e72; font-size: 12px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .selector-btn.active {
+      background: #3a2e22; color: #f5ebe0; border-color: #3a2e22;
+    }
 
-.hero {
-  position: relative;
-  padding: 56px 24px 44px;
-  background: linear-gradient(170deg, #f0e8dd 0%, #faf8f5 100%);
-  overflow: hidden;
-}
-.hero-accent {
-  position: absolute; top: -40px; right: -60px;
-  width: 220px; height: 220px;
-  background: radial-gradient(circle, rgba(199,130,60,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero-accent2 {
-  position: absolute; bottom: -30px; left: -30px;
-  width: 160px; height: 160px;
-  background: radial-gradient(circle, rgba(60,120,80,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-.brand-tag {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 5px 14px;
-  background: #fff;
-  border: 1px solid #e0d8ce;
-  border-radius: 20px;
-  margin-bottom: 28px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-.brand-tag-icon { font-size: 14px; }
-.brand-tag-text {
-  font-size: 10px; color: #8a6e4e; font-weight: 700; letter-spacing: 0.08em;
-}
-.hero-title {
-  font-size: 28px; font-weight: 900; line-height: 1.5;
-  letter-spacing: -0.01em;
-  margin-bottom: 16px;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-  color: #2a2018;
-}
-.hero-title .highlight {
-  background: linear-gradient(transparent 60%, #f0c87040 60%);
-  padding: 0 2px;
-}
-.hero-sub {
-  font-size: 14px; color: #7a6e62; line-height: 1.8;
-}
+    /* ── HERO ── */
+    .hero {
+      display: none;
+      padding: 32px 24px 36px;
+      background: linear-gradient(160deg, #f0e8dd 0%, #faf8f5 100%);
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid #e8e2da;
+    }
+    .hero.active { display: block; }
 
-.section { padding: 36px 24px; }
-.section-label {
-  font-size: 10px; color: #a09080; font-weight: 700;
-  letter-spacing: 0.12em; margin-bottom: 16px;
-}
-.section-label.accent { color: #b07830; }
+    /* 背景グロー */
+    .hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(192,120,58,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-comeback::before {
+      background: radial-gradient(circle, rgba(74,138,96,0.08) 0%, transparent 70%);
+    }
 
-.curiosity-list { display: flex; flex-direction: column; gap: 10px; }
-.curiosity-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 16px 18px;
-  background: #fff;
-  border-radius: 12px;
-  border: 1px solid #ebe5dc;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-}
-.curiosity-icon {
-  width: 36px; height: 36px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
-  background: #f5efe8;
-}
-.curiosity-text-wrap { flex: 1; }
-.curiosity-title {
-  font-size: 13px; font-weight: 900; color: #2a2018;
-  margin-bottom: 3px;
-}
-.curiosity-desc {
-  font-size: 11px; color: #8a7e72; line-height: 1.6;
-}
+    /* バッジ：ピル型 */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #fff;
+      border: 1px solid #e0d0bc;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #8a6e4e;
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+    }
 
-.hook-box {
-  margin-top: 24px; padding: 20px;
-  background: linear-gradient(135deg, #f5efe8, #faf8f5);
-  border: 1px solid #e0d8ce;
-  border-radius: 12px; text-align: center;
-}
-.hook-text {
-  font-size: 16px; font-weight: 900; color: #3a2e22; line-height: 1.7;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-}
-.hook-sub {
-  font-size: 12px; color: #8a7e72; margin-top: 6px; line-height: 1.6;
-}
+    .hero h1 {
+      font-size: clamp(24px, 6.5vw, 32px);
+      font-weight: 900;
+      line-height: 1.35;
+      color: #2a2018;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(transparent 58%, #f0c87050 58%);
+    }
 
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #e0d8ce, transparent);
-  margin: 0 24px;
-}
+    .hero-sub {
+      font-size: 13px;
+      color: #6a5e52;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
 
-.reasons-title {
-  font-size: 20px; font-weight: 900; margin-bottom: 20px;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-  color: #2a2018;
-}
-.reason-list { display: flex; flex-direction: column; gap: 14px; }
-.reason-card {
-  padding: 20px; background: #fff;
-  border-radius: 12px; border: 1px solid #ebe5dc;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-  position: relative; overflow: hidden;
-}
-.reason-card::before {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-  width: 3px;
-}
-.reason-card.accent-warm::before { background: #c0783a; }
-.reason-card.accent-green::before { background: #4a8a60; }
-.reason-card.accent-navy::before { background: #4a6080; }
-.reason-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.reason-num { font-size: 11px; font-weight: 900; opacity: 0.4; }
-.reason-num.warm { color: #c0783a; }
-.reason-num.green { color: #4a8a60; }
-.reason-num.navy { color: #4a6080; }
-.reason-title-text { font-size: 15px; font-weight: 900; color: #2a2018; }
-.reason-desc { font-size: 12px; color: #7a6e62; line-height: 1.7; }
+    /* LINE緑ボタン */
+    .line-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #06C755;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 16px 28px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 320px;
+      transition: opacity 0.2s;
+      box-shadow: 0 4px 16px rgba(6,199,85,0.25);
+    }
+    .line-btn:hover { opacity: 0.88; }
+    .line-btn-icon {
+      width: 20px; height: 20px;
+      background: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .line-btn-icon svg { width: 13px; height: 13px; }
 
-.numbers-box {
-  margin: 0 24px; padding: 24px 20px;
-  background: #fff;
-  border-radius: 12px; border: 1px solid #ebe5dc;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-}
-.numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.number-item { text-align: center; padding: 4px 0; }
-.number-value {
-  font-size: 34px; font-weight: 900; color: #c0783a;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-}
-.number-unit { font-size: 12px; color: #c0783a; font-weight: 700; }
-.number-desc { font-size: 10px; color: #a09080; display: block; margin-top: 2px; }
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fade-in 0.35s ease both; }
 
-.voice-list { display: flex; flex-direction: column; gap: 12px; }
-.voice-card {
-  padding: 18px 20px; background: #fff;
-  border-radius: 12px; border: 1px solid #ebe5dc;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-}
-.voice-text {
-  font-size: 13px; color: #3a2e22; line-height: 1.7;
-  margin-bottom: 8px;
-}
-.voice-role { font-size: 10px; color: #a09080; }
+    /* ── SECTION ── */
+    .section { padding: 36px 20px; }
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e0d8ce, transparent);
+    }
+    .section-label {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.15em; color: #b07830;
+      margin-bottom: 8px;
+    }
+    .section h2 {
+      font-size: clamp(18px, 5vw, 22px);
+      font-weight: 900; line-height: 1.4;
+      color: #2a2018; margin-bottom: 18px;
+    }
 
-.clinic-box {
-  margin: 0 24px; padding: 20px;
-  background: #fff; border-radius: 12px;
-  border: 1px solid #ebe5dc;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-}
-.clinic-name { font-size: 16px; font-weight: 900; color: #2a2018; margin-bottom: 4px; }
-.clinic-sub { font-size: 12px; color: #8a7e72; margin-bottom: 12px; }
-.clinic-row {
-  display: flex; justify-content: space-between;
-  font-size: 11px; padding: 7px 0;
-  border-bottom: 1px solid #f0ebe4;
-}
-.clinic-row:last-child { border-bottom: none; }
-.clinic-row-label { color: #3a2e22; font-weight: 700; }
-.clinic-row-addr { color: #a09080; }
+    /* ── FORMULA ── */
+    .formula-card {
+      background: linear-gradient(135deg, #f5efe8, #faf8f5);
+      border: 1px solid #ebe5dc; border-radius: 12px;
+      padding: 16px; margin-bottom: 10px;
+    }
+    .formula-card h3 { font-size: 13px; font-weight: 700; color: #3a2e22; margin-bottom: 5px; }
+    .formula-card p { font-size: 12px; color: #7a6e62; line-height: 1.7; }
+    .formula-cta { font-size: 13px; color: #7a6e62; line-height: 1.7; margin-top: 16px; }
+    .formula-cta strong { color: #2a2018; }
 
-.cta-section { padding: 40px 24px 32px; }
-.cta-lead { text-align: center; margin-bottom: 20px; }
-.cta-lead p { font-size: 14px; color: #5a5048; line-height: 1.7; margin-bottom: 4px; }
-.cta-lead small { font-size: 11px; color: #a09080; }
-.cta-btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  width: 100%; padding: 18px 24px;
-  background: linear-gradient(135deg, #06c755, #05a847);
-  color: #fff; font-size: 17px; font-weight: 900;
-  text-align: center; text-decoration: none;
-  border-radius: 14px; border: none; cursor: pointer;
-  letter-spacing: 0.04em;
-  box-shadow: 0 4px 16px rgba(6, 199, 85, 0.3);
-  transition: all 0.2s; font-family: inherit;
-}
-.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(6, 199, 85, 0.4); }
-.cta-note { text-align: center; font-size: 10px; color: #b0a898; margin-top: 12px; }
+    /* ── POINTS ── */
+    .points { display: none; }
+    .points.active { display: block; }
+    .point-item {
+      display: flex; gap: 14px;
+      padding: 16px 0; border-bottom: 1px solid #f0ebe4;
+    }
+    .point-item:last-child { border-bottom: none; }
+    .point-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+    .point-item h3 { font-size: 13px; font-weight: 700; color: #3a2e22; margin-bottom: 4px; }
+    .point-item p { font-size: 12px; color: #7a6e62; line-height: 1.7; }
+    .points-cta { font-size: 13px; color: #7a6e62; line-height: 1.7; margin-top: 16px; }
+    .points-cta strong { color: #2a2018; }
 
-.footer {
-  padding: 20px 24px; border-top: 1px solid #ebe5dc;
-  text-align: center; font-size: 10px; color: #c0b8ae;
-}
+    /* ── WHY ── */
+    .why-item { padding: 16px 0; border-bottom: 1px solid #f0ebe4; }
+    .why-item:last-child { border-bottom: none; }
+    .why-num { font-size: 9px; font-weight: 700; letter-spacing: 0.12em; color: #b07830; margin-bottom: 5px; }
+    .why-item h3 { font-size: 13px; font-weight: 700; color: #3a2e22; margin-bottom: 4px; }
+    .why-item p { font-size: 12px; color: #7a6e62; line-height: 1.7; }
 
-.fade-in { animation: fadeIn 0.5s ease-out; }
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    /* ── NUMBERS ── */
+    .numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .num-card {
+      background: linear-gradient(135deg, #f5efe8, #faf8f5);
+      border: 1px solid #ebe5dc; border-radius: 10px;
+      padding: 16px 12px; text-align: center;
+    }
+    .num-value { font-size: 26px; font-weight: 900; color: #c0783a; line-height: 1.1; }
+    .num-label { font-size: 10px; color: #a09080; margin-top: 4px; }
 
-.target-content { display: none; }
-.target-content.active { display: block; }
-</style>
+    /* ── VOICE ── */
+    .voice-item { background: #f5efe8; border-radius: 10px; padding: 16px; margin-bottom: 10px; }
+    .voice-text { font-size: 13px; line-height: 1.7; color: #3a2e22; margin-bottom: 6px; }
+    .voice-text::before { content: '「'; }
+    .voice-text::after { content: '」'; }
+    .voice-attr { font-size: 10px; color: #a09080; }
+
+    /* ── CLINIC INFO ── */
+    .recruit-badge {
+      display: inline-block;
+      background: #f5efe8; border: 1px solid #e0d0bc;
+      border-radius: 4px; padding: 6px 12px;
+      font-size: 11px; color: #8a6e4e;
+      margin-bottom: 14px; font-weight: 600;
+    }
+    .clinic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+    .clinic-card {
+      background: linear-gradient(135deg, #f5efe8, #faf8f5);
+      border: 1px solid #ebe5dc; border-radius: 8px;
+      padding: 12px 8px; text-align: center;
+    }
+    .clinic-card h3 { font-size: 12px; font-weight: 700; color: #3a2e22; margin-bottom: 2px; }
+    .clinic-card p { font-size: 10px; color: #a09080; }
+
+    /* ── CTA FOOTER ── */
+    .cta-section {
+      background: linear-gradient(160deg, #f0e8dd 0%, #faf8f5 100%);
+      border-top: 1px solid #e8e2da;
+      padding: 48px 24px; text-align: center;
+    }
+    .cta-section h2 { font-size: clamp(17px, 4.5vw, 22px); font-weight: 900; color: #2a2018; margin-bottom: 8px; }
+    .cta-section > p { font-size: 13px; color: #7a6e62; margin-bottom: 22px; }
+    .cta-section .line-btn { margin: 0 auto; }
+    .cta-note { font-size: 11px; color: #b0a090; margin-top: 12px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #f0ebe4; border-top: 1px solid #e8e2da;
+      padding: 20px; text-align: center; font-size: 11px; color: #a09080;
+    }
+  </style>
 </head>
 <body>
 
-<!-- STAFF SELECTOR -->
-<div class="selector-bar" id="selectorBar">
-  <div class="selector-header">
-    <span class="selector-label">STAFF用：相手に合わせて選択 ↓</span>
-    <button class="selector-close" onclick="document.getElementById('selectorBar').style.display='none'">×</button>
-  </div>
-  <div class="selector-buttons">
-    <button class="selector-btn active" id="btnTransfer" onclick="switchTarget('transfer')">転職を考えている人</button>
-    <button class="selector-btn" id="btnComeback" onclick="switchTarget('comeback')">鍼灸から離れている人</button>
-  </div>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-accent"></div>
-  <div class="hero-accent2"></div>
-
-  <div class="brand-tag">
-    <span class="brand-tag-icon">🔥</span>
-    <span class="brand-tag-text">成竹グループ 採用</span>
+  <!-- TARGET SWITCH -->
+  <div class="selector-bar">
+    <div class="selector-label">STAFF用：相手に合わせて選択 ↓</div>
+    <div class="selector-buttons">
+      <button class="selector-btn active" id="btnTransfer" onclick="switchTarget('transfer')">転職を考えている人</button>
+      <button class="selector-btn" id="btnComeback" onclick="switchTarget('comeback')">鍼灸から離れている人</button>
+    </div>
   </div>
 
-  <div class="target-content active" id="hero-transfer">
-    <h1 class="hero-title">鍼灸の結果が変わる<br><span class="highlight">「方程式」</span>が<br>成竹にはあります。</h1>
-    <p class="hero-sub">あなたの技術に、まだ伸びしろがあるとしたら？<br>その答え、見に来ませんか。</p>
+  <!-- HERO: 転職者向け -->
+  <div class="hero active fade-in" id="hero-transfer">
+    <div class="hero-badge">🔥 鍼灸師・柔道整復師 求人（江東区）</div>
+    <h1>鍼灸の結果が変わる<br>「方程式」が<br>成竹にはあります。</h1>
+    <p class="hero-sub">
+      あなたの技術に、まだ伸びしろがあるとしたら？<br>
+      その答え、見に来ませんか。<br><br>
+      学校で学んだ鍼灸を<em>"知っている"から"使える"</em>へ。
+    </p>
+    <a href="https://lin.ee/9v0N0e7" class="line-btn">
+      <span class="line-btn-icon">
+        <svg viewBox="0 0 24 24" fill="#06C755" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.03 2 11c0 3.08 1.68 5.78 4.24 7.44L5.5 22l4.04-2.14C10.3 20.27 11.14 20.4 12 20.4c5.52 0 10-4.03 10-9.4S17.52 2 12 2z"/>
+        </svg>
+      </span>
+      LINEで話を聞いてみる
+    </a>
   </div>
 
-  <div class="target-content" id="hero-comeback">
-    <h1 class="hero-title">あなたが学校で学んだ鍼灸を<br><span class="highlight">"知っている"</span>から<br><span class="highlight">"使える"</span>へ<br>なりたくないですか？</h1>
-    <p class="hero-sub">ブランクは関係ない。<br>成竹の「方程式」があれば、もう一度始められる。</p>
+  <!-- HERO: ブランク層向け -->
+  <div class="hero hero-comeback" id="hero-comeback">
+    <div class="hero-badge">🌱 鍼灸師・柔道整復師 求人（江東区）</div>
+    <h1>ブランクは関係ない。<br>成竹の「方程式」があれば、<br>もう一度始められる。</h1>
+    <p class="hero-sub">
+      離れていた期間は、あなたのせいじゃない。<br>
+      仕組みがあれば、また動ける。
+    </p>
+    <a href="https://lin.ee/9v0N0e7" class="line-btn">
+      <span class="line-btn-icon">
+        <svg viewBox="0 0 24 24" fill="#06C755" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.03 2 11c0 3.08 1.68 5.78 4.24 7.44L5.5 22l4.04-2.14C10.3 20.27 11.14 20.4 12 20.4c5.52 0 10-4.03 10-9.4S17.52 2 12 2z"/>
+        </svg>
+      </span>
+      LINEで話を聞いてみる
+    </a>
   </div>
-</div>
 
-<!-- CURIOSITY POINTS -->
-<div class="section">
+  <div class="section-divider"></div>
 
-  <!-- 転職者向け -->
-  <div class="target-content active" id="points-transfer">
-    <div class="section-label accent">成竹の「方程式」って？</div>
-    <div class="curiosity-list">
-      <div class="curiosity-item">
-        <div class="curiosity-icon">🔥</div>
-        <div class="curiosity-text-wrap">
-          <div class="curiosity-title">高頻度×短時間のサブスク＋鍼灸保険で「効果を出す仕組み」がある</div>
-          <div class="curiosity-desc">1回の施術を長くするのではなく、短時間で頻度を上げる。サブスクと保険の組み合わせで患者の通院ハードルを下げ、結果につなげる設計。</div>
+  <!-- FORMULA -->
+  <div class="section">
+    <p class="section-label">THE FORMULA</p>
+    <h2>成竹の「方程式」って？</h2>
+    <div class="formula-card">
+      <h3>🔥 高頻度×短時間のサブスク＋鍼灸保険で「効果を出す仕組み」がある</h3>
+      <p>1回の施術を長くするのではなく、短時間で頻度を上げる。サブスクと保険の組み合わせで患者の通院ハードルを下げ、結果につなげる設計。</p>
+    </div>
+    <div class="formula-card">
+      <h3>🗣️ ソーシャルスキルで「対面の影響力」を最大化する</h3>
+      <p>技術だけでは患者は変わらない。対面でのコミュニケーションを体系化し、患者の行動を変える「伝え方」を全スタッフが学べる環境。</p>
+    </div>
+    <div class="formula-card">
+      <h3>📐 「3類法」——古典に基づく成竹独自の診かた</h3>
+      <p>古典（先人たちの臨床データ）を元に、診かたを3つに絞って標準化。だから迷わない、ブレない、再現できる。</p>
+    </div>
+    <p class="formula-cta">この3つが合わさったとき、鍼灸の結果が変わる。<br><strong>見学に来れば、すべて見せます。</strong></p>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- POINTS -->
+  <div class="section">
+    <p class="section-label">WHY YOU CAN</p>
+    <h2>成竹なら、"使える"に変われる理由</h2>
+
+    <div class="points active" id="points-transfer">
+      <div class="point-item">
+        <div class="point-icon">🌱</div>
+        <div>
+          <h3>ブランクがあっても大丈夫。「仕組み」で効果が出せる</h3>
+          <p>個人の腕だけに頼らない。サブスク×保険×高頻度通院の設計があるから、経験が浅くても結果を出せる環境がある。</p>
         </div>
       </div>
-      <div class="curiosity-item">
-        <div class="curiosity-icon">🗣️</div>
-        <div class="curiosity-text-wrap">
-          <div class="curiosity-title">ソーシャルスキルで「対面の影響力」を最大化する</div>
-          <div class="curiosity-desc">技術だけでは患者は変わらない。対面でのコミュニケーションを体系化し、患者の行動を変える「伝え方」を全スタッフが学べる環境。</div>
+      <div class="point-item">
+        <div class="point-icon">🤝</div>
+        <div>
+          <h3>コミュニケーションも「型」がある。ゼロから学べる</h3>
+          <p>患者との話し方、伝え方に迷わない。ソーシャルスキルの体系があるから、人見知りでも対面の力を発揮できる。</p>
         </div>
       </div>
-      <div class="curiosity-item">
-        <div class="curiosity-icon">📐</div>
-        <div class="curiosity-text-wrap">
-          <div class="curiosity-title">「3類法」——古典に基づく成竹独自の診かた</div>
-          <div class="curiosity-desc">古典（先人たちの臨床データ）を元に、診かたを3つに絞って標準化。だから迷わない、ブレない、再現できる。</div>
-        </div>
-      </div>
-    </div>
-    <div class="hook-box">
-      <p class="hook-text">この3つが合わさったとき、<br>鍼灸の結果が変わる。<br>知りたくないですか？</p>
-      <p class="hook-sub">見学に来れば、すべて見せます。</p>
-    </div>
-  </div>
-
-  <!-- 復帰者向け -->
-  <div class="target-content" id="points-comeback">
-    <div class="section-label accent">成竹なら、"使える"に変われる理由</div>
-    <div class="curiosity-list">
-      <div class="curiosity-item">
-        <div class="curiosity-icon">🌱</div>
-        <div class="curiosity-text-wrap">
-          <div class="curiosity-title">ブランクがあっても大丈夫。「仕組み」で効果が出せる</div>
-          <div class="curiosity-desc">個人の腕だけに頼らない。サブスク×保険×高頻度通院の設計があるから、経験が浅くても結果を出せる環境がある。</div>
-        </div>
-      </div>
-      <div class="curiosity-item">
-        <div class="curiosity-icon">🤝</div>
-        <div class="curiosity-text-wrap">
-          <div class="curiosity-title">コミュニケーションも「型」がある。ゼロから学べる</div>
-          <div class="curiosity-desc">患者との話し方、伝え方に迷わない。ソーシャルスキルの体系があるから、人見知りでも対面の力を発揮できる。</div>
-        </div>
-      </div>
-      <div class="curiosity-item">
-        <div class="curiosity-icon">📐</div>
-        <div class="curiosity-text-wrap">
-          <div class="curiosity-title">「3類法」で迷わない。古典に基づく診かたが道しるべになる</div>
-          <div class="curiosity-desc">古典（先人たちの臨床データ）を元に、診かたを3つに絞って標準化。学校で学んだ知識と合わさると、施術の判断に自信が持てるようになる。</div>
+      <div class="point-item">
+        <div class="point-icon">📐</div>
+        <div>
+          <h3>「3類法」で迷わない。古典に基づく診かたが道しるべになる</h3>
+          <p>古典（先人たちの臨床データ）を元に、診かたを3つに絞って標準化。学校で学んだ知識と合わさると、施術の判断に自信が持てる。</p>
         </div>
       </div>
     </div>
-    <div class="hook-box">
-      <p class="hook-text">あなたの資格を<br>"使える"に変える環境、<br>見に来ませんか？</p>
-      <p class="hook-sub">まずは見学だけでもOKです。</p>
-    </div>
-  </div>
 
-</div>
-
-<div class="divider"></div>
-
-<!-- WHY SEICHIKU -->
-<div class="section">
-  <div class="section-label accent">WHY SEICHIKU?</div>
-  <h2 class="reasons-title">成竹が選ばれる3つの理由</h2>
-
-  <div class="reason-list">
-    <div class="reason-card accent-warm">
-      <div class="reason-header">
-        <span class="reason-num warm">01</span>
-        <span class="reason-title-text">お灸が「看板メニュー」の鍼灸整骨院</span>
+    <div class="points" id="points-comeback">
+      <div class="point-item">
+        <div class="point-icon">🌱</div>
+        <div>
+          <h3>ブランクがあっても大丈夫。「仕組み」で効果が出せる</h3>
+          <p>個人の腕だけに頼らない。サブスク×保険×高頻度通院の設計があるから、ブランクがあっても結果を出せる。</p>
+        </div>
       </div>
-      <p class="reason-desc">東京でも珍しい、お灸を本気でやっている院。院内はモクモクと煙が立ち上る。他では学べないお灸の技術を、ここで極められる。</p>
-    </div>
-    <div class="reason-card accent-green">
-      <div class="reason-header">
-        <span class="reason-num green">02</span>
-        <span class="reason-title-text">AIフル活用。施術とコミュニケーション以外の業務ゼロへ</span>
+      <div class="point-item">
+        <div class="point-icon">🤝</div>
+        <div>
+          <h3>コミュニケーションも「型」がある。ゼロから学べる</h3>
+          <p>患者との話し方、伝え方に迷わない。ソーシャルスキルの体系があるから、現場を離れていても対面の力をすぐに取り戻せる。</p>
+        </div>
       </div>
-      <p class="reason-desc">事務作業・書類・管理業務にAIを導入し、スタッフの時間を施術と患者さまとのコミュニケーションに集中させる。「雑務に追われる」を終わりにする院。</p>
-    </div>
-    <div class="reason-card accent-navy">
-      <div class="reason-header">
-        <span class="reason-num navy">03</span>
-        <span class="reason-title-text">短時間正社員・フリーランス・業務委託もOK</span>
+      <div class="point-item">
+        <div class="point-icon">📐</div>
+        <div>
+          <h3>「3類法」で迷わない。古典に基づく診かたが道しるべになる</h3>
+          <p>学校で学んだ知識が「3類法」と合わさることで、施術の判断に自信が持てる。離れていた期間は関係ない。</p>
+        </div>
       </div>
-      <p class="reason-desc">働き方改革を本気で進めている。フルタイムだけが選択肢じゃない。短時間正社員の枠組み、フリーランス、業務委託——あなたに合った働き方を一緒に設計できる。</p>
     </div>
-  </div>
-</div>
 
-<!-- NUMBERS -->
-<div class="numbers-box">
-  <div class="section-label" style="text-align:center; margin-bottom:16px">NUMBERS</div>
-  <div class="numbers-grid">
-    <div class="number-item">
-      <span class="number-value">3</span><span class="number-unit">店舗</span>
-      <span class="number-desc">江東区で運営中</span>
-    </div>
-    <div class="number-item">
-      <span class="number-value">10</span><span class="number-unit">店舗</span>
-      <span class="number-desc">拡大目標</span>
-    </div>
-    <div class="number-item">
-      <span class="number-value">7</span><span class="number-unit">年</span>
-      <span class="number-desc">平均勤続年数</span>
-    </div>
-    <div class="number-item">
-      <span class="number-value">68</span><span class="number-unit">人</span>
-      <span class="number-desc">鍼灸保険の月間数</span>
-    </div>
-  </div>
-</div>
-
-<!-- STAFF VOICE -->
-<div class="section">
-  <div class="section-label">STAFF VOICE</div>
-  <div class="voice-list">
-    <div class="voice-card">
-      <p class="voice-text">「お灸をこんなに本格的にやっている院は他にない。毎日が勉強になる。」</p>
-      <span class="voice-role">— 鍼灸師 / 入社2年目</span>
-    </div>
-    <div class="voice-card">
-      <p class="voice-text">「鍼灸保険とサブスクの量を積むことで、オーダーメイドの患者さまの施術に活かされている。」</p>
-      <span class="voice-role">— 柔道整復師 / 入社3年目</span>
-    </div>
-  </div>
-</div>
-
-<!-- CLINIC INFO -->
-<div class="clinic-box">
-  <div class="section-label">CLINIC INFO</div>
-  <div class="clinic-name">成竹グループ（せいちくグループ）</div>
-  <div class="clinic-sub">鍼灸整骨院 ｜ 江東区</div>
-  <div class="clinic-row">
-    <span class="clinic-row-label">南砂院</span>
-    <span class="clinic-row-addr">江東区南砂</span>
-  </div>
-  <div class="clinic-row">
-    <span class="clinic-row-label">塩浜院</span>
-    <span class="clinic-row-addr">江東区塩浜</span>
-  </div>
-  <div class="clinic-row" style="border-bottom:none">
-    <span class="clinic-row-label">東砂院</span>
-    <span class="clinic-row-addr">江東区東砂</span>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="cta-section">
-  <div class="cta-lead">
-    <p>「方程式」の中身、気になりませんか？</p>
-    <small>LINEで「見学希望」と送るだけでOKです</small>
+    <p class="points-cta">あなたの資格を"使える"に変える環境、見に来ませんか？<br><strong>まずは見学だけでもOKです。</strong></p>
   </div>
 
-  <!-- ↓↓↓ LINE公式アカウントのURLに差し替えてください ↓↓↓ -->
-  <a href="https://lin.ee/9v0N0e7" class="cta-btn" target="_blank" rel="noopener noreferrer">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
-      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .348-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .349-.281.63-.63.63h-2.386c-.345 0-.627-.281-.627-.63V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.63-.631.63-.346 0-.626-.286-.626-.63V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.63-.631.63-.345 0-.627-.286-.627-.63V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.63H4.917c-.345 0-.63-.286-.63-.63V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .349-.281.63-.629.63M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-    </svg>
-    LINEで話を聞いてみる
-  </a>
+  <div class="section-divider"></div>
 
-  <p class="cta-note">※ 強引な勧誘は一切しません。見学だけでもOKです。</p>
-</div>
+  <!-- WHY SEICHIKU -->
+  <div class="section">
+    <p class="section-label">WHY SEICHIKU?</p>
+    <h2>成竹が選ばれる3つの理由</h2>
+    <div class="why-item">
+      <div class="why-num">01</div>
+      <h3>お灸が「看板メニュー」の鍼灸整骨院</h3>
+      <p>東京でも珍しい、お灸を本気でやっている院。院内はモクモクと煙が立ち上る。他では学べないお灸の技術を、ここで極められる。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02</div>
+      <h3>AIフル活用。施術とコミュニケーション以外の業務ゼロへ</h3>
+      <p>事務作業・書類・管理業務にAIを導入し、スタッフの時間を施術と患者さまとのコミュニケーションに集中させる。「雑務に追われる」を終わりにする院。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03</div>
+      <h3>短時間正社員・フリーランス・業務委託もOK</h3>
+      <p>働き方改革を本気で進めている。フルタイムだけが選択肢じゃない。短時間正社員、フリーランス、業務委託——あなたに合った働き方を一緒に設計できる。</p>
+    </div>
+  </div>
 
-<!-- FOOTER -->
-<div class="footer">© 成竹グループ（せいちくグループ）</div>
+  <div class="section-divider"></div>
 
-<script>
-function switchTarget(target) {
-  document.getElementById('btnTransfer').classList.toggle('active', target === 'transfer');
-  document.getElementById('btnComeback').classList.toggle('active', target === 'comeback');
-  document.getElementById('hero-transfer').classList.toggle('active', target === 'transfer');
-  document.getElementById('hero-comeback').classList.toggle('active', target === 'comeback');
-  document.getElementById('points-transfer').classList.toggle('active', target === 'transfer');
-  document.getElementById('points-comeback').classList.toggle('active', target === 'comeback');
-  var el = document.getElementById('hero-' + target);
-  el.classList.remove('fade-in');
-  void el.offsetWidth;
-  el.classList.add('fade-in');
-}
-</script>
+  <!-- NUMBERS -->
+  <div class="section">
+    <p class="section-label">NUMBERS</p>
+    <div class="numbers-grid">
+      <div class="num-card"><div class="num-value">3店舗</div><div class="num-label">江東区で運営中</div></div>
+      <div class="num-card"><div class="num-value">10店舗</div><div class="num-label">拡大目標</div></div>
+      <div class="num-card"><div class="num-value">7年</div><div class="num-label">平均勤続年数</div></div>
+      <div class="num-card"><div class="num-value">68人</div><div class="num-label">鍼灸保険の月間数</div></div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- STAFF VOICE -->
+  <div class="section">
+    <p class="section-label">STAFF VOICE</p>
+    <h2>スタッフの声</h2>
+    <div class="voice-item">
+      <p class="voice-text">お灸をこんなに本格的にやっている院は他にない。毎日が勉強になる。</p>
+      <p class="voice-attr">— 鍼灸師 / 入社2年目</p>
+    </div>
+    <div class="voice-item">
+      <p class="voice-text">鍼灸保険とサブスクの量を積むことで、オーダーメイドの患者さまの施術に活かされている。</p>
+      <p class="voice-attr">— 柔道整復師 / 入社3年目</p>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- CLINIC INFO -->
+  <div class="section">
+    <p class="section-label">CLINIC INFO</p>
+    <h2>成竹グループ（せいちくグループ）<br>鍼灸整骨院 ｜ 江東区</h2>
+    <p class="recruit-badge">🔥 鍼灸師・柔道整復師 求人募集中｜江東区3院（南砂・塩浜・東砂）</p>
+    <div class="clinic-grid">
+      <div class="clinic-card"><h3>南砂院</h3><p>江東区南砂</p></div>
+      <div class="clinic-card"><h3>塩浜院</h3><p>江東区塩浜</p></div>
+      <div class="clinic-card"><h3>東砂院</h3><p>江東区東砂</p></div>
+    </div>
+  </div>
+
+  <!-- CTA FOOTER -->
+  <div class="cta-section">
+    <h2>「方程式」の中身、気になりませんか？</h2>
+    <p>LINEで「見学希望」と送るだけでOKです</p>
+    <a href="https://lin.ee/9v0N0e7" class="line-btn">
+      <span class="line-btn-icon">
+        <svg viewBox="0 0 24 24" fill="#06C755" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.03 2 11c0 3.08 1.68 5.78 4.24 7.44L5.5 22l4.04-2.14C10.3 20.27 11.14 20.4 12 20.4c5.52 0 10-4.03 10-9.4S17.52 2 12 2z"/>
+        </svg>
+      </span>
+      LINEで話を聞いてみる
+    </a>
+    <p class="cta-note">※ 強引な勧誘は一切しません。見学だけでもOKです。</p>
+  </div>
+
+  <footer>© 成竹グループ（せいちくグループ）</footer>
+
+  <script>
+    function switchTarget(target) {
+      document.getElementById('btnTransfer').classList.toggle('active', target === 'transfer');
+      document.getElementById('btnComeback').classList.toggle('active', target === 'comeback');
+      document.getElementById('hero-transfer').classList.toggle('active', target === 'transfer');
+      document.getElementById('hero-comeback').classList.toggle('active', target === 'comeback');
+      document.getElementById('points-transfer').classList.toggle('active', target === 'transfer');
+      document.getElementById('points-comeback').classList.toggle('active', target === 'comeback');
+      var el = document.getElementById('hero-' + target);
+      el.classList.remove('fade-in');
+      void el.offsetWidth;
+      el.classList.add('fade-in');
+    }
+  </script>
 
 </body>
 </html>
